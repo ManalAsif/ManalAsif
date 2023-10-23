@@ -1,0 +1,205 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int num=0;
+    cout<<"enter code number";
+    cin>>num;
+    if (num==1)
+    {
+       for (int i = 1; i <= 50; i+=2)
+    {
+        cout<<"square root of "<<i<<" is "<<sqrt(i)<<endl;
+    }
+    }
+    if (num==2)
+    {
+        int x,factorial=1;
+        long factorial2=1;
+        int y;
+        cout<<"enter num: ";
+        cin>>x;
+        for (int i = 1; i <= x; i++)
+        {
+            factorial=factorial*i;
+        }
+        cout<<"factorial of given number is: "<<factorial<<endl;
+        cout<<"press 1 to calculate factorial of the result"<<endl;
+        cin>>y;
+        if(y==1)
+        {
+            for (int z = 1; z <= factorial; z++)
+            {
+                factorial2=factorial2*z;
+            }
+            cout<<"factorial of result is: "<<factorial2;
+            
+        }
+        if(y==0)
+        {
+            exit;
+        }
+        
+    }
+    if(num==3)
+    {
+        int num1,num2,power;
+        cout<<"enter two num:"<<endl;
+        cin>>num1>>num2;
+        power=pow(num1,num2);
+        cout<<power;
+    }
+    if(num==4)
+    {
+        int tablenum,length,result;
+        cout<<"enter table number: ";
+        cin>>tablenum;
+        cout<<"enter table length: ";
+        cin>>length;
+        for (int i = 1; i <= length; i++)
+        {
+            result=tablenum*i;
+            cout<<tablenum<<" X "<<i<<" = "<<result<<endl;
+            result=0;
+        }
+    }
+    if(num==5)
+    {
+        int floor,numrooms,occupied,unoccupied;
+        float totalrooms=0,totalocp=0,totalucp=0, percentage;
+        cout<<"enter number of floors: ";
+        cin>>floor;
+        for (int i = 1; i <= floor; i++)
+        {
+            cout<<"total  num of rooms: ";
+            cin>>numrooms;
+            cout<<"enter num of rooms ocupied: ";
+            cin>>occupied;
+            unoccupied=numrooms-occupied;
+            totalrooms=totalrooms+numrooms;
+            totalocp=totalocp+occupied;
+            totalucp=totalucp+unoccupied;
+        }
+        percentage=(totalocp/totalrooms)*100;
+        cout<<totalocp/totalrooms<<endl;
+        cout<<"total number of rooms: "<<totalrooms<<endl;
+        cout<<"total number of rooms occupied: "<<totalocp<<endl;
+        cout<<"total number of rooms unoccupied: "<<totalucp<<endl;
+        cout<<"percentage of rooms occupied: "<<percentage<<endl;
+
+    }
+    if(num==6)
+    {
+        int num1,num2;
+        cout<<"enter starting number: ";
+        cin>>num1;
+        cout<<"enter ending point: ";
+        cin>>num2;
+        for (int i = num1; i >=num2 ;i--)
+        {
+            for (int x = num2; x <= i;x++)
+            {
+                cout<<i;
+            }
+            cout<<endl;
+        }
+        
+    }
+    if(num==7)
+    {
+        int x,sum,power=0,total;
+        cout<<"enter num: ";
+        cin>>x;
+        if(x<=0)
+        {
+            exit;
+        }
+        for (int i = 1; i <x; i++)
+        {
+            power=power+pow(i,2);
+            cout<<i<<"^2 + ";
+            
+        }
+        cout<<x<<"^2";
+        power=power+pow(x,2);
+        cout<<endl<<"the sum of square of series is: "<<power;   
+    }
+    if(num==8)
+    {
+        int r,c;
+        cout<<"enter rows";
+        cin>>r;
+        cout<<"enter column";
+        cin>>c;
+        for (int i = 1; i <= r; i++)
+        {
+            for (int y = 1; y <= c; y++)
+            {
+                if(i==1 || i==r)
+                {
+                    if(y%8==0)
+                    {
+                        cout<<" ";
+
+                    }
+                    else
+                    {
+                        cout<<"=";
+                    }
+                }
+                else
+                {
+                    if(y==1||y==c)
+                    {
+                        cout<<"=";
+                    }
+                    else
+                    {
+                        cout<<" ";
+                    }
+                }
+            }
+            cout<<endl;
+            
+        }
+        
+    }
+    if(num==9)
+    {
+        int sum=0;
+        int x[5];
+        for (int i = 0; i <5; i++)
+        {
+            cout<<"enter num";
+            cin>>x[i];
+            sum=sum+x[i];
+        }
+        cout<<"sum of array is: "<<sum;
+        
+        
+    }
+    if(num==10)
+    {
+        int temp=0;
+        int x[6];
+        for (int i = 0; i <6; i++)
+        {
+            cout<<"enter num: ";
+            cin>>x[i];
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            temp=x[i];
+            x[i]=x[5-i];
+            x[5-i]=temp;
+        }
+        for (int i = 0; i <6; i++)
+        {
+            cout<<x[i];
+        }
+        
+    }
+    
+    
+}
